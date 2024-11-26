@@ -6,60 +6,75 @@ const Owners = () => {
       <h2 style={styles.heading}>Owner Dashboard</h2>
       <p style={styles.description}>
         Welcome to the Owner Dashboard! Manage your properties, track tenant
-        activity, and access valuable insights to maximize your investments.
+        activity, access financial insights, and leverage our dedicated support system to maximize your property investments.
       </p>
 
-      {/* Manage Properties Section */}
+      {/* Property Portfolio Management */}
       <section style={styles.section}>
-        <h3 style={styles.subheading}>Manage Properties</h3>
+        <h3 style={styles.subheading}>Property Portfolio</h3>
         <p style={styles.text}>
-          Stay in control of your property portfolio with real-time updates and
-          management tools.
+          Access all your properties in one place. Manage details, tenants, and maintenance efficiently.
         </p>
         <ul style={styles.list}>
-          <li style={styles.listItem}>View property details and status</li>
           <li style={styles.listItem}>Add or remove properties</li>
-          <li style={styles.listItem}>Schedule property maintenance</li>
+          <li style={styles.listItem}>View occupancy rates and leasing information</li>
+          <li style={styles.listItem}>Track maintenance requests and status</li>
+          <li style={styles.listItem}>Download property performance reports</li>
         </ul>
       </section>
 
-      {/* Financial Reports Section */}
+      {/* Financial Insights */}
       <section style={styles.section}>
-        <h3 style={styles.subheading}>Financial Reports</h3>
+        <h3 style={styles.subheading}>Financial Insights</h3>
         <p style={styles.text}>
-          Access detailed financial reports to stay informed about your
-          property income and expenses.
+          Stay on top of your financial performance with real-time reporting and insights.
         </p>
         <ul style={styles.list}>
-          <li style={styles.listItem}>Monthly income and expense summaries</li>
-          <li style={styles.listItem}>Tax documents and year-end reports</li>
-          <li style={styles.listItem}>Downloadable financial statements</li>
+          <li style={styles.listItem}>Track rent payments and overdue balances</li>
+          <li style={styles.listItem}>View monthly, quarterly, and annual reports</li>
+          <li style={styles.listItem}>Generate tax documents and prepare for filings</li>
+          <li style={styles.listItem}>Access ROI and profit/loss analysis</li>
         </ul>
       </section>
 
-      {/* Manage Tenants Section */}
+      {/* Tenant Communication */}
       <section style={styles.section}>
-        <h3 style={styles.subheading}>Manage Tenants</h3>
+        <h3 style={styles.subheading}>Tenant Communication</h3>
         <p style={styles.text}>
-          Keep track of tenant activity and maintain strong communication.
+          Ensure seamless communication with your tenants to foster a positive experience.
         </p>
         <ul style={styles.list}>
-          <li style={styles.listItem}>View tenant details and lease agreements</li>
-          <li style={styles.listItem}>Track rent payments and outstanding balances</li>
-          <li style={styles.listItem}>Send notices or updates to tenants</li>
+          <li style={styles.listItem}>Send announcements or updates</li>
+          <li style={styles.listItem}>Review tenant feedback</li>
+          <li style={styles.listItem}>Access lease agreements and tenant profiles</li>
+          <li style={styles.listItem}>Issue rent reminders and notices</li>
         </ul>
       </section>
 
-      {/* Support Section */}
+      {/* Maintenance Requests */}
+      <section style={styles.section}>
+        <h3 style={styles.subheading}>Maintenance Tracking</h3>
+        <p style={styles.text}>
+          Manage maintenance requests with ease and ensure all issues are resolved promptly.
+        </p>
+        <ul style={styles.list}>
+          <li style={styles.listItem}>View all active and completed requests</li>
+          <li style={styles.listItem}>Approve repair estimates</li>
+          <li style={styles.listItem}>Schedule regular inspections</li>
+          <li style={styles.listItem}>Monitor vendor performance and feedback</li>
+        </ul>
+      </section>
+
+      {/* Owner Support */}
       <section style={styles.section}>
         <h3 style={styles.subheading}>Owner Support</h3>
         <p style={styles.text}>
-          Need help? Our dedicated support team is here to assist you.
+          Your success is our priority. Connect with our dedicated support team for assistance.
         </p>
         <ul style={styles.list}>
-          <li style={styles.listItem}>24/7 owner support hotline</li>
-          <li style={styles.listItem}>Live chat with property managers</li>
-          <li style={styles.listItem}>FAQs and resources</li>
+          <li style={styles.listItem}>24/7 access to live support</li>
+          <li style={styles.listItem}>Chat with property management experts</li>
+          <li style={styles.listItem}>Explore our knowledge base and resources</li>
         </ul>
       </section>
     </div>
