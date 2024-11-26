@@ -1,15 +1,28 @@
+import sqlite3
 from datetime import datetime
 from collections import defaultdict
 
-# Simulated function to retrieve rent payments (replace with your database call)
 def get_rent_payments():
-    # Example data structure; replace with actual DB query
-    return [
-        {"date": datetime(2024, 1, 5), "amount": 1000},
-        {"date": datetime(2024, 1, 15), "amount": 1200},
-        {"date": datetime(2024, 2, 10), "amount": 900},
-        {"date": datetime(2024, 2, 20), "amount": 1100},
+    """
+    Fetch rent payment data from the SQLite database.
+
+    Returns:
+        List[Dict]: A list of dictionaries containing payment dates and amounts.
+    """
+    conn = sqlite3.connect("database.db")  # Ensure the database file is in the same directory
+    cursor = conn.cursor()
+
+    # Query the rent_payments table
+    cursor.execute("SELECT date, amount FROM rent_payments")
+    
+    # Format the data into a list of dictionaries
+    payments = [
+        {"date": datetime.strptime(row[0], '%Y-%m-%d'), "amount": row[1]}
+        for row in cursor.fetchall()
     ]
+    
+    conn.close()
+    return payments
 
 def total_rent_per_month():
     payments = get_rent_payments()
