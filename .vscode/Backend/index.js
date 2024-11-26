@@ -1,16 +1,21 @@
 // Import dependencies
 require("dotenv").config(); // Load environment variables
 const express = require("express");
-const bodyParser = require("body-parser");
 const stripe = require("stripe")(process.env.STRIPE_SECRET_KEY); // Initialize Stripe with secret key
 
 // Create an Express app
 const app = express();
-const PORT = 5000;
+const PORT = process.env.PORT || 5000;
 
 // Middleware
-app.use(bodyParser.json()); // Parse JSON requests
-app.use(bodyParser.urlencoded({ extended: true })); // Parse URL-encoded requests
+app.use(express.json()); // Built-in middleware to parse JSON
+app.use(express.urlencoded({ extended: true })); // Built-in middleware to parse URL-encoded data
+
+// Check if Stripe secret key is provided
+if (!process.env.STRIPE_SECRET_KEY) {
+  console.error("Error: Stripe secret key is not set in the environment variables.");
+  process.exit(1); // Exit the app
+}
 
 // Routes
 app.get("/", (req, res) => {
@@ -20,6 +25,10 @@ app.get("/", (req, res) => {
 // Example: Handle rent payments
 app.post("/api/payment", async (req, res) => {
   const { amount, currency, paymentMethodId } = req.body;
+
+  if (!amount || !currency || !paymentMethodId) {
+    return res.status(400).json({ success: false, message: "Missing required fields." });
+  }
 
   try {
     // Create a PaymentIntent with the provided details
@@ -56,6 +65,10 @@ app.get("/api/points", (req, res) => {
 app.post("/api/properties", (req, res) => {
   const { name, address, type, status } = req.body;
 
+  if (!name || !address || !type) {
+    return res.status(400).json({ success: false, message: "Missing required fields." });
+  }
+
   // Replace with database logic
   console.log("Property added:", { name, address, type, status });
   res.status(201).json({
@@ -78,6 +91,10 @@ app.get("/api/financial-reports", (req, res) => {
 // Example: Tenant communication
 app.post("/api/messages", (req, res) => {
   const { message } = req.body;
+
+  if (!message) {
+    return res.status(400).json({ success: false, message: "Message content is required." });
+  }
 
   // Replace with database logic to save message
   console.log("Message received:", message);
