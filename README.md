@@ -48,7 +48,4 @@ This backend application supports the Shi Shi Kokoro Property Management system,
 - [Stripe API Key](https://stripe.com/)
 
 ### Installation Steps
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/YourUsername/YourRepoName.git
-   cd Shi-Shi-Kokoro-PM/.vscode/Backend
+
