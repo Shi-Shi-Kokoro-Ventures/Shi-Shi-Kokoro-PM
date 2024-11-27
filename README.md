@@ -1,17 +1,17 @@
-# Shi Shi Kokoro Property Management Backend
+# Shi Shi Kokoro Property Management
 
-Welcome to the Shi Shi Kokoro Property Management backend server. This project is a backend system designed to support property management services by integrating rent payment processing, tenant communication, financial reporting, and property data management. The backend uses Stripe for secure payment handling and provides a robust API for interaction.
+Welcome to the Shi Shi Kokoro Property Management system. This project includes both the backend and frontend applications designed to support efficient property management services.
 
 ---
 
 ## 📜 Overview
 
-This backend application supports the Shi Shi Kokoro Property Management system, enabling efficient management of rental properties. Key features include:
-- **Tenant and Owner Management**: APIs for adding, updating, and managing tenant and owner details.
-- **Rent Payment System**: Secure integration with Stripe for processing rent payments.
-- **Financial Reporting**: APIs to fetch detailed financial summaries.
-- **Tenant Communication**: Send and log tenant messages for streamlined communication.
-- **Property Management**: Add and manage property details with ease.
+The Shi Shi Kokoro Property Management system provides:
+- **Tenant and Owner Management**: Tools for adding, updating, and managing tenant and owner details.
+- **Rent Payment System**: Secure payment handling via Stripe.
+- **Financial Reporting**: Detailed summaries for income and expenses.
+- **Tenant Communication**: Streamlined communication tools for tenant interaction.
+- **Property Management**: Comprehensive tools to manage property details.
 
 ---
 
@@ -19,9 +19,9 @@ This backend application supports the Shi Shi Kokoro Property Management system,
 
 - **Secure Rent Payments**: Process payments via Stripe with full PCI compliance.
 - **Loyalty Points System**: Manage and retrieve tenant reward points.
-- **Property Data**: Add, retrieve, and manage property information.
-- **Financial Reports**: Retrieve monthly reports for income and expenses.
-- **Custom APIs**: Extendable and scalable APIs for future requirements.
+- **Property Data Management**: Add, retrieve, and manage property information.
+- **Financial Reports**: Monthly income and expense reports.
+- **Extendable APIs**: Scalable and customizable APIs for future enhancements.
 
 ---
 
@@ -31,12 +31,16 @@ This backend application supports the Shi Shi Kokoro Property Management system,
 - **Express.js**: Web framework for building APIs.
 - **Stripe API**: Payment gateway integration.
 - **dotenv**: Manage environment variables.
-- **MongoDB**: (Planned) Database for storing tenant, property, and payment data.
+- **MongoDB**: (Planned) Database for tenant, property, and payment data.
+- **React**: Frontend framework for building the user interface.
 
 ---
 
 ## 📂 Project Structure
 
+- **Frontend**: React application for user interaction.
+- **Backend**: Node.js API server.
+- **Shared Features**: Integration of rent payment, tenant communication, and property management.
 
 ---
 
@@ -49,3 +53,7 @@ This backend application supports the Shi Shi Kokoro Property Management system,
 
 ### Installation Steps
 
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/Shi-Shi-Kokoro-Ventures/Shi-Shi-Kokoro-PM.git
+   cd Shi-Shi-Kokoro-PM
