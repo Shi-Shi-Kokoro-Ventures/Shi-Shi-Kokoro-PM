@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rent Analytics Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        /* Inline styles for simplicity. Move to styles.css in production. */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+
+        header {
+            background-color: #007bff;
+            color: #fff;
+            padding: 1rem 2rem;
+            text-align: center;
+        }
+
+        main {
+            padding: 2rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .chart-container {
+            width: 80%;
+            max-width: 800px;
+            margin: 2rem auto;
+        }
+
+        footer {
+            text-align: center;
+            padding: 1rem;
+            background-color: #007bff;
+            color: #fff;
+            margin-top: 2rem;
+        }
+
+        .error {
+            color: red;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Monthly Rent Analytics Dashboard</h1>
+    </header>
+
+    <main>
+        <div class="chart-container">
+            <canvas id="rentChart"></canvas>
+        </div>
+        <div id="error-message" class="error" style="display: none;">
+            Failed to load data. Please try again later.
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Shi Shi Kokoro Property Management</p>
+    </footer>
+
+    <script>
+        // Fetch data from the API
+        async function fetchRentData() {
+            try {
+                const response = await fetch('http://127.0.0.1:5000/api/analytics/rent-per-month');
+                if (!response.ok) throw new Error('Network response was not ok');
+                const data = await response.json();
+                return data;
+            } catch (error) {
+                console.error('Error fetching data:', error);
+                document.getElementById('error-message').style.display = 'block';
+                throw error; // Stop execution if data fetch fails
+            }
+        }
+
+        // Initialize the Chart.js chart
+        async function initializeChart() {
+            try {
+                const rentData = await fetchRentData();
+                const labels = Object.keys(rentData); // Months
+                const values = Object.values(rentData); // Rent amounts
+
+                const ctx = document.getElementById('rentChart').getContext('2d');
+                new Chart(ctx, {
+                    type: 'bar',
+                    data: {
+                        labels: labels,
+                        datasets: [{
+                            label: 'Total Rent Collected ($)',
+                            data: values,
+                            backgroundColor: 'rgba(54, 162, 235, 0.2)',
+                            borderColor: 'rgba(54, 162, 235, 1)',
+                            borderWidth: 1
+                        }]
+                    },
+                    options: {
+                        responsive: true,
+                        plugins: {
+                            legend: {
+                                display: true,
+                                position: 'top',
+                            },
+                            title: {
+                                display: true,
+                                text: 'Monthly Rent Analytics'
+                            }
+                        },
+                        scales: {
+                            y: {
+                                beginAtZero: true
+                            }
+                        }
+                    }
+                });
+            } catch (error) {
+                console.error('Chart initialization failed:', error);
+            }
+        }
+
+        // Initialize the dashboard on page load
+        document.addEventListener('DOMContentLoaded', initializeChart);
+    </script>
+</body>
+
+</html>
