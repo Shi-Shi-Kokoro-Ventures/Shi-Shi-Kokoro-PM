@@ -1,70 +1,59 @@
-# Getting Started with Create React App
+# Shi Shi Kokoro Property Management
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Welcome to the Shi Shi Kokoro Property Management system. This project includes both the backend and frontend applications designed to support efficient property management services.
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+## 📜 Overview
 
-### `npm start`
+The Shi Shi Kokoro Property Management system provides:
+- **Tenant and Owner Management**: Tools for adding, updating, and managing tenant and owner details.
+- **Rent Payment System**: Secure payment handling via Stripe.
+- **Financial Reporting**: Detailed summaries for income and expenses.
+- **Tenant Communication**: Streamlined communication tools for tenant interaction.
+- **Property Management**: Comprehensive tools to manage property details.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+---
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## 🚀 Features
 
-### `npm test`
+- **Secure Rent Payments**: Process payments via Stripe with full PCI compliance.
+- **Loyalty Points System**: Manage and retrieve tenant reward points.
+- **Property Data Management**: Add, retrieve, and manage property information.
+- **Financial Reports**: Monthly income and expense reports.
+- **Extendable APIs**: Scalable and customizable APIs for future enhancements.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+---
 
-### `npm run build`
+## 🛠️ Technologies Used
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- **Node.js**: Backend runtime environment.
+- **Express.js**: Web framework for building APIs.
+- **Stripe API**: Payment gateway integration.
+- **dotenv**: Manage environment variables.
+- **MongoDB**: (Planned) Database for tenant, property, and payment data.
+- **React**: Frontend framework for building the user interface.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+---
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## 📂 Project Structure
 
-### `npm run eject`
+- **Frontend**: React application for user interaction.
+- **Backend**: Node.js API server.
+- **Shared Features**: Integration of rent payment, tenant communication, and property management.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+---
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## ⚙️ Setup Instructions
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### Prerequisites
+- [Node.js](https://nodejs.org/) (v14+ recommended)
+- [npm](https://www.npmjs.com/)
+- [Stripe API Key](https://stripe.com/)
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### Installation Steps
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/Shi-Shi-Kokoro-Ventures/Shi-Shi-Kokoro-PM.git
+   cd Shi-Shi-Kokoro-PM

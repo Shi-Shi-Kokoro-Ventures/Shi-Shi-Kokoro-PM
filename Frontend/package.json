@@ -1,0 +1,45 @@
+{
+  "name": "shi-shi-kokoro-pm-server",
+  "version": "1.0.0",
+  "description": "Backend server for Shi Shi Kokoro Property Management, integrating Stripe for payment processing.",
+  "main": "index.js",
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "keywords": [
+    "property management",
+    "server",
+    "API",
+    "Stripe",
+    "Express",
+    "Shi Shi Kokoro"
+  ],
+  "author": "Philly Pressley",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.21.1",
+    "mongoose": "^7.0.3",
+    "stripe": "^17.4.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.22"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}
