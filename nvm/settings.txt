@@ -1,0 +1,2 @@
+root: C:\Users\Dev\shi_shi_Kokoro_pm\nvm
+path: C:\Program Files\nodejs
